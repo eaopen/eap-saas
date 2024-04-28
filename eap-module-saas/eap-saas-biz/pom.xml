@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.eaopen</groupId>
+        <artifactId>eap-module-saas</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>eap-saas-biz</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-module-system-api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-module-system-biz</artifactId>
+            <version>${revision}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-module-infra-api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <!-- 业务组件 -->
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-spring-boot-starter-excel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-spring-boot-starter-biz-i18n</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-spring-boot-starter-biz-data-permission</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-spring-boot-starter-biz-tenant</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-spring-boot-starter-biz-ip</artifactId>
+        </dependency>
+
+        <!-- Web 相关 -->
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- DB 相关 -->
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-spring-boot-starter-mybatis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-spring-boot-starter-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+
+        <!-- Test 测试相关 -->
+        <dependency>
+            <groupId>io.github.eaopen</groupId>
+            <artifactId>eap-spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
+    </dependencies>
+
+</project>
