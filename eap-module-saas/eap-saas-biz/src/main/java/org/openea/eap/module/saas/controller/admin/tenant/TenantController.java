@@ -8,10 +8,10 @@ import org.openea.eap.framework.common.util.object.BeanUtils;
 import org.openea.eap.framework.excel.core.util.ExcelUtils;
 import org.openea.eap.module.system.controller.admin.tenant.vo.tenant.TenantPageReqVO;
 import org.openea.eap.module.saas.controller.admin.tenant.vo.tenant.TenantRespVO;
-import org.openea.eap.module.saas.controller.admin.tenant.vo.tenant.TenantSaveReqVO;
+import org.openea.eap.module.system.controller.admin.tenant.vo.tenant.TenantSaveReqVO;
 import org.openea.eap.module.saas.controller.admin.tenant.vo.tenant.TenantSimpleRespVO;
 import org.openea.eap.module.system.dal.dataobject.tenant.TenantDO;
-import org.openea.eap.module.saas.service.tenant.TenantService2;
+import org.openea.eap.module.saas.service.tenant.TenantServiceExt;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -34,7 +34,7 @@ import static org.openea.eap.framework.common.pojo.CommonResult.success;
 public class TenantController {
 
     @Resource
-    private TenantService2 tenantService;
+    private TenantServiceExt tenantService;
 
     @GetMapping("/get-id-by-name")
     @PermitAll

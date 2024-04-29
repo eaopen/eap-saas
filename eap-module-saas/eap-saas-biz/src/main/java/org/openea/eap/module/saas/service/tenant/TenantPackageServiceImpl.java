@@ -34,7 +34,7 @@ public class TenantPackageServiceImpl implements TenantPackageService {
 
     @Resource
     @Lazy // 避免循环依赖的报错
-    private TenantService2 tenantService;
+    private TenantServiceExt tenantService;
 
     @Override
     public Long createTenantPackage(TenantPackageSaveReqVO createReqVO) {

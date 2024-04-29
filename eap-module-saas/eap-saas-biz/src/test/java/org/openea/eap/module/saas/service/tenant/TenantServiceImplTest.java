@@ -11,7 +11,7 @@ import org.openea.eap.framework.test.core.ut.BaseDbUnitTest;
 import org.openea.eap.framework.test.core.util.AssertUtils;
 import org.openea.eap.framework.test.core.util.RandomUtils;
 import org.openea.eap.module.system.controller.admin.tenant.vo.tenant.TenantPageReqVO;
-import org.openea.eap.module.saas.controller.admin.tenant.vo.tenant.TenantSaveReqVO;
+import org.openea.eap.module.system.controller.admin.tenant.vo.tenant.TenantSaveReqVO;
 import org.openea.eap.module.system.dal.dataobject.permission.MenuDO;
 import org.openea.eap.module.system.dal.dataobject.permission.RoleDO;
 import org.openea.eap.module.system.dal.dataobject.tenant.TenantDO;
@@ -22,6 +22,7 @@ import org.openea.eap.module.system.enums.permission.RoleTypeEnum;
 import org.openea.eap.module.system.service.permission.MenuService;
 import org.openea.eap.module.system.service.permission.PermissionService;
 import org.openea.eap.module.system.service.permission.RoleService;
+import org.openea.eap.module.system.service.tenant.TenantServiceImpl;
 import org.openea.eap.module.system.service.tenant.handler.TenantInfoHandler;
 import org.openea.eap.module.system.service.tenant.handler.TenantMenuHandler;
 import org.openea.eap.module.system.service.user.AdminUserService;
@@ -55,7 +56,7 @@ import static org.mockito.ArgumentMatchers.*;
 public class TenantServiceImplTest extends BaseDbUnitTest {
 
     @Resource
-    private TenantServiceImpl tenantService;
+    private TenantServiceExtImpl tenantService;
 
     @Resource
     private TenantMapper tenantMapper;

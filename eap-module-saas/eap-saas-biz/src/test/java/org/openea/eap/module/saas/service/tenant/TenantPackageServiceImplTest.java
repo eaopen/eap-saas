@@ -14,7 +14,6 @@ import org.openea.eap.module.system.dal.dataobject.tenant.TenantDO;
 import org.openea.eap.module.saas.dal.dataobject.tenant.TenantPackageDO;
 import org.openea.eap.module.saas.dal.mysql.tenant.TenantPackageMapper;
 import org.junit.jupiter.api.Test;
-import org.openea.eap.module.system.service.tenant.TenantService;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 
@@ -26,13 +25,10 @@ import static org.openea.eap.framework.common.util.date.LocalDateTimeUtils.build
 import static org.openea.eap.framework.common.util.object.ObjectUtils.cloneIgnoreId;
 import static org.openea.eap.framework.test.core.util.AssertUtils.assertPojoEquals;
 import static org.openea.eap.framework.test.core.util.AssertUtils.assertServiceException;
-import static org.openea.eap.framework.test.core.util.RandomUtils.*;
 import static org.openea.eap.module.system.enums.ErrorCodeConstants.*;
 import static java.util.Arrays.asList;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 /**
 * {@link TenantPackageServiceImpl} 的单元测试类
@@ -48,7 +44,7 @@ public class TenantPackageServiceImplTest extends BaseDbUnitTest {
     private TenantPackageMapper tenantPackageMapper;
 
     @MockBean
-    private TenantService2 tenantService;
+    private TenantServiceExt tenantService;
 
     @Test
     public void testCreateTenantPackage_success() {
