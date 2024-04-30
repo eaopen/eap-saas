@@ -142,7 +142,7 @@ public class TenantPackageServiceImplTest extends BaseDbUnitTest {
     public void testGetTenantPackagePage() {
        // mock 数据
        TenantPackageDO dbTenantPackage = RandomUtils.randomPojo(TenantPackageDO.class, o -> { // 等会查询到
-           o.setName("芋道源码");
+           o.setName("OpenEAP");
            o.setStatus(CommonStatusEnum.ENABLE.getStatus());
            o.setRemark("源码解析");
            o.setCreateTime(buildTime(2022, 10, 10));

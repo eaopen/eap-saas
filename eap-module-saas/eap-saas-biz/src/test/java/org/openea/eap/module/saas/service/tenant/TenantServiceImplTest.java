@@ -287,7 +287,7 @@ public class TenantServiceImplTest extends BaseDbUnitTest {
     public void testGetTenantPage() {
         // mock 数据
         TenantDO dbTenant = RandomUtils.randomPojo(TenantDO.class, o -> { // 等会查询到
-            o.setName("芋道源码");
+            o.setName("OpenEAP");
             o.setContactName("芋艿");
             o.setContactMobile("15601691300");
             o.setStatus(CommonStatusEnum.ENABLE.getStatus());
