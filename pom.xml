@@ -20,6 +20,19 @@
 
     <properties>
         <revision>2.6.0-SNAPSHOT</revision>
+        <eap-boot.version>2.6.0-SNAPSHOT</eap-boot.version>
+        <spring.boot.version>2.7.18</spring.boot.version>
+
+        <!-- eap 扩展模块版本 -->
+        <!-- suite1(func) -->
+        <eap-report.version>2.6.0-SNAPSHOT</eap-report.version>
+        <eap-cms.version>2.6.0-SNAPSHOT</eap-cms.version>
+        <!-- suite2(2b) -->
+        <eap-crm.version>2.6.0-SNAPSHOT</eap-crm.version>
+        <eap-erp.version>2.6.0-SNAPSHOT</eap-erp.version>
+        <!-- suite3(2c) -->
+        <eap-mall.version>2.6.0-SNAPSHOT</eap-mall.version>
+
         <!-- Maven 相关 -->
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -29,7 +42,6 @@
         <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
         <!-- 看看咋放到 bom 里 -->
         <lombok.version>1.18.30</lombok.version>
-        <spring.boot.version>2.7.18</spring.boot.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -59,9 +71,34 @@
             <dependency>
                 <groupId>io.github.eaopen</groupId>
                 <artifactId>eap-dependencies</artifactId>
-                <version>${revision}</version>
+                <version>${eap-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-boot-starter</artifactId>
+                <version>${eap-boot.version}</version>
+            </dependency>
+
+            <!-- saas 依赖模块版本 -->
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-module-system-api</artifactId>
+                <version>${eap-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-module-system-biz</artifactId>
+                <version>${eap-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.eaopen</groupId>
+                <artifactId>eap-module-infra-api</artifactId>
+                <version>${eap-boot.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

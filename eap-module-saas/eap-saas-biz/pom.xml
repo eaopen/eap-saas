@@ -15,20 +15,17 @@
         <dependency>
             <groupId>io.github.eaopen</groupId>
             <artifactId>eap-module-system-api</artifactId>
-            <version>${revision}</version>
         </dependency>
 
         <dependency>
             <groupId>io.github.eaopen</groupId>
             <artifactId>eap-module-system-biz</artifactId>
-            <version>${revision}</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>io.github.eaopen</groupId>
             <artifactId>eap-module-infra-api</artifactId>
-            <version>${revision}</version>
         </dependency>
 
         <!-- 业务组件 -->

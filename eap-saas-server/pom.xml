@@ -24,12 +24,12 @@
         <dependency>
             <groupId>io.github.eaopen</groupId>
             <artifactId>eap-module-system-rest</artifactId>
-            <version>${revision}</version>
+            <version>${eap-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.eaopen</groupId>
             <artifactId>eap-module-infra-rest</artifactId>
-            <version>${revision}</version>
+            <version>${eap-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.eaopen</groupId>
